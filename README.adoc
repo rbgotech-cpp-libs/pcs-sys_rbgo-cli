@@ -1,0 +1,82 @@
+:document-title: CLI: Command Line Interface tools!
+:table-caption: off
+
+= *rbgotech/rbgo-cli*
+
+[.big]"`**_CLI: Command Line Interface tools!_**`"
+
+[caption="" cols="25h,~m" frame=all grid=all width=100%]
+|===
+
+|last update
+|20230710
+
+|language
+|C++
+
+|namespace
+|rbgo
+
+|library ref
+|rbgotech/rbgo-cli
+
+|entry points
+|rbgo-cli.h
+
+|dependencies
+|rbgotech/rbgo-types
+
+|environment
+|VSCode, Platformio
+
+|platform
+|linux_x86_64 
+
+|framework
+|all
+|===
+
+=== Description
+
+This repository represents a library for Linux CLI applications.
+For each CLI application there is the part of handling the CLI interface,
+and those chunks of code are gathered here triggered by simplified calls.
+
+.Functionality
+[options="header" caption="" cols="4h,6m" frame=all grid=all width=100%]
+|===
+|function
+|description
+
+2+^m|`#class CliMode#`
+
+2+d|
+Gets the command line interface in the mode required for the application. +
+This is a class with all static calls; it is expected that only one "instance"
+exists for any application. +
+Always start with initialize() and end with restore().
+
+m|static void initialize();
+|Prepares for altering the CLI mode. Backs up current mode for restore when done.
+
+m|static void inputBlock(bool b);
+|Determines if input system calls like getchar() block and wait for input or
+return immediately.
+
+m|static void inputEcho(bool b);
+|Determines if user input is echoed to screen.
+
+m|static void inputBlockEcho();
+|Will call inputBlock(true) and inputEcho(true).
+
+m|static void inputNoBlockNoEcho();
+|Will call inputBlock(false) and inputEcho(false).
+
+m|static void outputNoBuf();
+|Sets the output buffer to NULL, so that output is send to screen immediately.
+
+m|static void restore();
+|Restores the CLI/terminal window, to its default mode.
+
+|===
+|===
