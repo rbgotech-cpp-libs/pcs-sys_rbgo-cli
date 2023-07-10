@@ -1,0 +1,23 @@
+{
+	"name": "rbgotech/rbgo-cli",
+	"version": "0.0.1",
+	"description": "CLI: Command Line Interface tools!",
+	"keywords": "CLI, Command Line Interface, Tools",
+	"repository":{
+		"type": "git",
+		"url": "https://github.com/rbgotech-cpp-libs/pcs-sys_rbgo-cli.git"
+	},
+	"authors":[{
+		"name": "Robert Goossens (rbgo)",
+		"email": "rbgo.web@gmail.com",
+		"homepage": "https://github.com/rbgo",
+		"maintainer": true
+	}],
+	"license": "MIT",
+	"homepage": "https://github.com/rbgotech-cpp-libs/pcs-sys_rbgo-cli",
+	"dependencies":{
+		"rbgotech/rbgo-types": "*"
+	},
+	"platforms": "linux_x86_64",
+	"frameworks": "*"
+}
