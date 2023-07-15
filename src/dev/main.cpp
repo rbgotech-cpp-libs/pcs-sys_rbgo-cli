@@ -1,3 +1,4 @@
+#ifdef RBGOCLI_DEVMAIN
 #include <stdlib.h>//setbuf, system, exit, atoi
 #include <stdio.h>//puts, printf, scanf
 #include <unistd.h>//usleep
@@ -60,3 +61,4 @@ break2://---- Test case data free ----
 	rbgo::CliMode::restore();
 
 }
+#endif//RBGOCLI_DEVMAIN
